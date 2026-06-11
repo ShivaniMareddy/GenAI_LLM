@@ -1,0 +1,232 @@
+/* Background */
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #020617,
+    #0f172a,
+    #111827
+  );
+  min-height: 100vh;
+}
+
+/* Main App */
+
+.app {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 48px;
+  margin-bottom: 25px;
+  font-weight: 800;
+
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #8b5cf6,
+    #22c55e
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Chat Container */
+
+.chat-box {
+  height: 650px;
+  overflow-y: auto;
+
+  padding: 25px;
+
+  border-radius: 25px;
+
+  background: rgba(30, 41, 59, 0.75);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(59, 130, 246, 0.15);
+}
+
+/* Scrollbar */
+
+.chat-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 20px;
+}
+
+/* User Message */
+
+.user {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #3b82f6
+  );
+
+  color: white;
+
+  padding: 16px 20px;
+
+  border-radius: 20px 20px 4px 20px;
+
+  margin: 15px 0;
+
+  width: fit-content;
+  max-width: 75%;
+
+  margin-left: auto;
+
+  box-shadow:
+    0 5px 15px rgba(37, 99, 235, 0.35);
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* AI Message */
+
+.ai {
+  background: rgba(51, 65, 85, 0.9);
+
+  color: white;
+
+  padding: 18px 22px;
+
+  border-radius: 20px 20px 20px 4px;
+
+  margin: 15px 0;
+
+  width: fit-content;
+  max-width: 80%;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.25);
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Input Area */
+
+.input-box {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Input */
+
+input {
+  flex: 1;
+
+  padding: 18px 20px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 16px;
+
+  font-size: 17px;
+
+  color: white;
+
+  background: rgba(30, 41, 59, 0.85);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+/* Button */
+
+button {
+  border: none;
+
+  padding: 18px 28px;
+
+  border-radius: 16px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  color: white;
+
+  cursor: pointer;
+
+  background: linear-gradient(
+    135deg,
+    #22c55e,
+    #16a34a
+  );
+
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(34, 197, 94, 0.35);
+}
+
+/* Code Blocks */
+
+pre {
+  background: #020617;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  overflow-x: auto;
+
+  margin-top: 12px;
+}
+
+code {
+  color: #22c55e;
+  font-family: "Fira Code", monospace;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  .chat-box {
+    height: 500px;
+  }
+
+  .user,
+  .ai {
+    max-width: 95%;
+  }
+
+  button {
+    padding: 16px;
+  }
+}
